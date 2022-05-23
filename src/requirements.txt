@@ -1,0 +1,16 @@
+
+# API requiremetens
+fastapi
+fastapi_utils
+python-multipart
+uvicorn[standard]
+
+# Mongo
+motor
+pymongo
+
+# Test requirements
+pytest
+pytest-cov
+flake8
+requests

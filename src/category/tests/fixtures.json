@@ -1,0 +1,46 @@
+[
+  {
+    "category_id": 1,
+    "name": "Clothes"
+  },
+  {
+    "category_id": 2,
+    "name": "Men",
+    "parent_id": 1
+  },
+  {
+    "category_id": 4,
+    "name": "Business Casual",
+    "parent_id": 2
+  },
+  {
+    "category_id": 5,
+    "name": "Sport",
+    "parent_id": 2
+  },
+  {
+    "category_id": 3,
+    "name": "Women",
+    "parent_id": 1
+  },
+  {
+    "category_id": 6,
+    "name": "Dress",
+    "parent_id": 3
+  },
+  {
+    "category_id": 7,
+    "name": "Sport",
+    "parent_id": 3
+  },
+  {
+    "category_id": 8,
+    "name": "Running",
+    "parent_id": 5
+  },
+  {
+    "category_id": 9,
+    "name": "Running",
+    "parent_id": 7
+  }
+]

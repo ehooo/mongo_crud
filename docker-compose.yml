@@ -1,0 +1,40 @@
+version: "3.9"
+services:
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    env_file:
+      - config.env
+    volumes:
+      - mongodb:/data/db
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    env_file:
+      - config.env
+
+  web:
+    image: "mongo_crud:latest"
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - PY_VERSION=3.9
+    environment:
+      API_ARGS: --reload
+    env_file:
+      - config.env
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./src/:/src/"
+      - "./api_entrypoint.sh:/usr/bin/api_entrypoint.sh"
+    user: "1000:1000"
+
+volumes:
+  mongodb:
